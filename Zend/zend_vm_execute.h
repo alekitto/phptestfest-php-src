@@ -28280,7 +28280,7 @@ static ZEND_OPCODE_HANDLER_RET ZEND_FASTCALL ZEND_ROPE_INIT_SPEC_UNUSED_CONST_HA
 		var = RT_CONSTANT(opline, opline->op2);
 		rope[0] = Z_STR_P(var);
 		if (UNEXPECTED(Z_REFCOUNTED_P(var))) {
-			Z_ADDREF_P(Z_STR_P(var));
+			Z_ADDREF_P(var);
 		}
 	} else {
 		var = RT_CONSTANT(opline, opline->op2);
